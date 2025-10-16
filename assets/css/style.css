@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+  --blue-800: #0F2C50;
+  --blue-200: #A6C4DC;
+  --pink-300: #ECA8B0;
+  --white: #F9F9F9;
+  --gray-500: #6D8BA0;
+  --coral-500: #FF6B6B;
+}
+body {
+    background-color: var(--white);
+    color: var(--gray-500);
+
+font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--white);
+    color: var(--gray-500);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Título principal – azul escuro */
+h1 {
+  color: var(--white);;
+  font-size: 2rem;
+}
+
+/* Subtítulo – também azul escuro, mantendo consistência */
+h2 {
+  color: var(--blue-800);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+/* Título menor – toque sutil com rosa suave */
+h3 {
+  color: var(--pink-300);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Texto – azul escuro para máxima legibilidade */
+p {
+  color: var(--blue-800);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+section {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+header {
+  background: #0F2C50; /* Azul principal da Quartzo */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid #ECA8B0; /* Rosa suave Quartzo */
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #F9F9F9; /* Branco neve */
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  color: #ECA8B0; /* Rosa suave Quartzo */
+  text-decoration: underline;
+}
+#about {
+  background-color: #A6C4DC; /* Azul claro Quartzo */
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+#about article {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about img {
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 50%; /* Deixa a imagem redondinha */
+  border: 3px solid #0F2C50; /* Azul escuro principal */
+}
+
+#about p {
+  flex: 1;
+  color: #0F2C50; /* Azul escuro para contraste */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+/* === Seção VÍDEO === */
+#video {
+  background-color: var(--blue-200);
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #F9F9F9; /* branco neve */
+  background-color: #0F2C50; /* azul principal */
+  font-weight: bold;
+  text-align: center;
+}
+
+footer section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+footer img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  transition: transform 0.3s, filter 0.3s;
+  filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(173%) hue-rotate(176deg) brightness(91%) contrast(91%);
+  /* 👆 cria um azul claro (#A6C4DC) */
+}
+
+footer img:hover {
+  transform: scale(1.15);
+  filter: brightness(0) saturate(100%) invert(71%) sepia(34%) saturate(559%) hue-rotate(316deg) brightness(99%) contrast(94%);
+  /* 👆 muda para rosa suave (#ECA8B0) */
+}
+
+footer p {
+  color: #ECA8B0;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.main_contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: #0F2C50; /* Azul principal */
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #F9F9F9; /* Branco neve */
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background-color: #A6C4DC; /* Azul claro */
+  border-radius: 1rem;
+}
+
+form input,
+textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  background-color: #F9F9F9; /* Branco neve */
+  color: #0F2C50; /* Azul principal */
+}
+
+textarea {
+  resize: none;
+  height: 6rem;
+}
+
+/* Botão */
+form button {
+  background-color: #ECA8B0; /* Rosa suave */
+  color: #0F2C50; /* Azul principal */
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #FF6B6B; /* Coral vibrante */
+  color: #fff;
+}
+
+/* Mensagens pequenas */
+form span {
+  color: #FF6B6B;
+  font-size: 0.75rem;
+}
+
+/* Mapa */
+iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: none;
+}
+.article_mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #A6C4DC; /* Azul claro */
+  color: #0F2C50; /* Azul principal */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+/* Endereço */
+.article_mapa address {
+  width: 80%;
+  text-align: center;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Negrito suave no texto */
+.article_mapa address p {
+  font-weight: 600;
+  margin: 0.3rem 0;
+}
+
+/* Mapa */
+.article_mapa iframe {
+  align-self: center;
+  width: 90%;
+  height: 300px;
+  border-radius: 0.75rem;
+  border: none;
+}
+/* Seção do vídeo */
+#video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Título */
+#video h2 {
+  color: #0F2C50;
+  font-size: 1.5rem;
+}
+
+/* Contêiner responsivo do vídeo */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Iframe do YouTube */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+body {
+  min-height: 100vh; /* Garante que a página ocupe 100% da altura da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Faz o conteúdo empurrar o rodapé pra baixo */
+  margin-bottom: 2rem; /* Dá um respiro antes do rodapé */
+}
+
+footer {
+  width: 100%;
+}
+
