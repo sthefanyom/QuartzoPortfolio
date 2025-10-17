@@ -275,14 +275,16 @@ iframe {
   margin: 0.3rem 0;
 }
 
-/* Mapa */
-.article_mapa iframe {
-  align-self: center;
-  width: 90%;
-  height: 300px;
-  border-radius: 0.75rem;
+/* Iframes (vídeo/mapa) — regra base segura */
+iframe {
+  width: 100%;
+  height: auto;        /* evita esticar verticalmente */
+  max-width: 100%;
+  border-radius: 1rem;
   border: none;
+  display: block;
 }
+
 /* Seção do vídeo */
 #video {
   display: flex;
@@ -421,5 +423,117 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+}
+/* ======== MODO MOBILE ======== */
+@media (max-width: 768px) {
+
+  /* Estrutura geral */
+  body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  /* ====== Cabeçalho ====== */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  /* ====== Seção SOBRE ====== */
+  #about {
+    padding: 1rem;
+  }
+
+  #about article {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #about img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ====== Seção VÍDEO ====== */
+  #video {
+    padding: 1rem;
+  }
+
+  #video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* ====== Seção CONTATO ====== */
+  .main_contato {
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .main_contato form {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .main_contato .article_mapa,
+  .main_contato iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ====== Rodapé ====== */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  footer section {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
   }
 }
