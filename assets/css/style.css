@@ -337,3 +337,89 @@ footer {
   width: 100%;
 }
 
+/* ========== MODO MOBILE ========== */
+@media (max-width: 768px) {
+
+  /* GERAL */
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  /* CABEÇALHO */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  /* SEÇÃO SOBRE */
+  #about {
+    padding: 1rem;
+  }
+
+  #about article {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  #about img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* VÍDEO */
+  #video {
+    padding: 1rem;
+  }
+
+  #video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* RODAPÉ */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
